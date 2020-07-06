@@ -1,9 +1,11 @@
 package com.app.ibmhackchallenge.activity
 
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.Toast
@@ -48,6 +50,8 @@ class AnalysisActivity : AppCompatActivity() {
         graph.description.text = "Prediction of Output Power"
         graph.setNoDataText("Select any day by tapping the date icon!")
         graph.setNoDataTextTypeface(Typeface.MONOSPACE)
+
+        val backButton: Button? = findViewById(R.id.backMain)
 
         val yAxis: YAxis = graph.axisLeft
 
@@ -245,6 +249,10 @@ class AnalysisActivity : AppCompatActivity() {
             })
 
             progressBar.visibility = View.GONE
+        }
+
+        backButton?.setOnClickListener {
+            startActivity(Intent(this@AnalysisActivity, MainActivity::class.java))
         }
 
         Toast.makeText(this, "Select any day by tapping the date icon!", Toast.LENGTH_LONG).show()

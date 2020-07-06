@@ -197,6 +197,7 @@
             android:layout_below="@id/wind_image"/>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/wind_table"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/wind_text"
@@ -215,7 +216,6 @@
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
                     android:layout_margin="5dp"
-                    android:textColor="#FFF"
                     android:layout_centerHorizontal="true"/>
 
                 <androidx.recyclerview.widget.RecyclerView
@@ -228,6 +228,18 @@
             </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/backMain"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="#000"
+            android:layout_below="@id/wind_table"
+            android:text="Go Back"
+            android:background="@drawable/round_button"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp" />
 
     </RelativeLayout>
 

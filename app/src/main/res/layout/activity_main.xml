@@ -10,15 +10,59 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="60dp">
+        android:paddingTop="20dp">
+
+        <ImageView
+            android:id="@+id/head_image"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_ibm"
+            android:layout_centerHorizontal="true" />
+
+        <RelativeLayout
+            android:id="@+id/github"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/head_image" >
+
+            <ImageButton
+                android:id="@+id/github_repo"
+                android:layout_width="30dp"
+                android:background="@drawable/github_button"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="10dp"
+                android:layout_height="30dp" />
+
+        </RelativeLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPagerMain"
+            android:overScrollMode="never"
+            android:clipToPadding="false"
+            android:layout_below="@id/github"
+            android:layout_width="match_parent"
+            android:layout_height="550dp" />
+
+        <TextView
+            android:id="@+id/calculator_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="#000"
+            android:typeface="monospace"
+            android:text="Power Calculator"
+            android:layout_below="@id/viewPagerMain" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/main_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:elevation="15dp"
+            android:layout_below="@id/calculator_head"
             app:cardCornerRadius="10dp"
-            android:layout_margin="10dp" >
+            android:layout_margin="15dp" >
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -27,6 +71,7 @@
                 <EditText
                     android:id="@+id/param1"
                     android:layout_margin="30dp"
+                    android:inputType="numberDecimal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Parameter 1" />
@@ -35,6 +80,7 @@
                     android:id="@+id/param2"
                     android:layout_margin="30dp"
                     android:layout_width="match_parent"
+                    android:inputType="numberDecimal"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/param1"
                     android:hint="Parameter 2" />
@@ -43,6 +89,7 @@
                     android:id="@+id/param3"
                     android:layout_margin="30dp"
                     android:layout_width="match_parent"
+                    android:inputType="numberDecimal"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/param2"
                     android:hint="Parameter 3" />
@@ -74,12 +121,30 @@
 
         <Button
             android:id="@+id/analysis_button"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="#FDD835"
+            android:background="@drawable/round_button_hollow"
+            android:layout_below="@id/main_card"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:typeface="monospace"
+            android:layout_margin="30dp"
+            android:layout_centerHorizontal="true"
+            android:text="Get 72hr Prediction"/>
+
+        <TextView
+            android:id="@+id/how_it_works_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/main_card"
-            android:layout_margin="50dp"
-            android:layout_centerHorizontal="true"
-            android:text="Analysis" />
+            android:textSize="12sp"
+            android:textColor="#E53935"
+            android:layout_below="@id/analysis_button"
+            android:typeface="monospace"
+            android:layout_margin="20dp"
+            android:layout_alignParentEnd="true"
+            android:text="Know how this app works"/>
 
     </RelativeLayout>
 
