@@ -67,15 +67,14 @@ class MainActivity : AppCompatActivity() {
         calculateButton.setOnClickListener {
             val firstParam = param1.text.toString()
             val secondParam = param2.text.toString()
-            val thirdParam = param3.text.toString()
-            if (firstParam.isEmpty() || secondParam.isEmpty() || thirdParam.isEmpty()) {
+            if (firstParam.isEmpty() || secondParam.isEmpty()) {
                 Toast.makeText(this, "All Parameters are required!", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-            val a = firstParam.toFloat()
-            val b = secondParam.toFloat()
-            val c = thirdParam.toFloat()
-            result.text = (a + b + c).toString()
+            val radius = firstParam.toFloat()
+            val speed = secondParam.toFloat()
+            val power: Double = 1.57 * (radius * radius) * (speed * speed * speed) * 1.2 * 40
+            result.text = power.toFloat().toString() + " kW"
         }
 
         githubButton.setOnClickListener {

@@ -4,7 +4,7 @@
     <string name="heading1">"Welcome!"</string>
     <string name="description1">"•	 This app is made to help wind farms utilize maximum wind power and regulate other conventional sources of energy according to the wind power predictions that we are making here!"</string>
     <string name="heading2">"Why Wind Energy?"</string>
-    <string name="description2">"•	It is clean and renewable.\n\n•	 It is the fastest-growing energy source and accounts to 4 percent of the world’s electricity needs.\n\n•	 Utilizing wind power can save valuable fossil fuels."</string>
+    <string name="description2">"•	 It is clean and renewable.\n\n•	 It is the fastest-growing energy source and accounts to 4 percent of the world’s electricity needs.\n\n•	 Utilizing wind power can save valuable fossil fuels."</string>
 
     <string name="heading3">"Our Attempt"</string>
     <string name="description3">"•	 We have developed a time series model to predict the hourly power output of wind farm in Aliaga, Turkey and suggest the best time to utilise maximum wind power based on the weather conditions at site."</string>

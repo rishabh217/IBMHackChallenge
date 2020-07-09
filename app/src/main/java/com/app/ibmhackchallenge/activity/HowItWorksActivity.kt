@@ -25,14 +25,14 @@ class HowItWorksActivity : AppCompatActivity() {
         cards = ArrayList()
         cards!!.add(
             Card(
-                R.string.heading2,
-                R.string.description2
+                R.string.heading3,
+                R.string.description3
             )
         )
         cards!!.add(
             Card(
-                R.string.heading3,
-                R.string.description3
+                R.string.heading2,
+                R.string.description2
             )
         )
         cards!!.add(

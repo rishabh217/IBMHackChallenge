@@ -278,6 +278,10 @@ class AnalysisActivity : AppCompatActivity() {
         val iLineDataSet: ArrayList<ILineDataSet> = ArrayList<ILineDataSet>()
         iLineDataSet.add(lineDataSet)
 
+        lineDataSet.color = R.color.colorPrimaryDark
+        lineDataSet.setCircleColor(Color.BLACK)
+        lineDataSet.valueTextColor = Color.RED
+
         val max = power.max() ?:0
         val pos = power.indexOf(max)
         val date = calenderInstance.time
