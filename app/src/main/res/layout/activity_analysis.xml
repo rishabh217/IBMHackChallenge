@@ -48,7 +48,7 @@
             android:layout_marginTop="30dp"
             android:textColor="#000"
             android:typeface="monospace"
-            android:text="24 Hour Analysis"
+            android:text="3 Day Analysis"
             android:layout_below="@id/location_text"/>
 
         <RelativeLayout
@@ -209,7 +209,7 @@
             android:layout_marginTop="30dp"
             android:typeface="monospace"
             android:textColor="#000"
-            android:text="24 Hour Wind Speed Analysis"
+            android:text="3 Day Wind Speed Analysis"
             android:layout_below="@id/wind_image"/>
 
         <androidx.cardview.widget.CardView

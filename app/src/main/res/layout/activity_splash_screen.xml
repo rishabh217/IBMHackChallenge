@@ -11,14 +11,14 @@
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_centerInParent="true"
-        android:src="@drawable/ic_ibm" />
+        android:src="@drawable/ic_splash" />
 
     <ImageView
-        android:layout_width="70dp"
+        android:layout_width="300dp"
         android:layout_height="70dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="30dp"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:src="@drawable/ic_processor" />
+        android:layout_below="@id/imageView"
+        android:src="@drawable/ic_logo" />
 
 </RelativeLayout>

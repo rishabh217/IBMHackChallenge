@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">IBMHackChallenge</string>
+    <string name="app_name">Zephyr</string>
 
     <string name="heading1">"Welcome!"</string>
     <string name="description1">"This app is made to help wind farms utilize maximum wind power and regulate other conventional sources of energy according to the wind power predictions that we are making here!"</string>
@@ -14,7 +14,7 @@
     <string name="heading5">"We Stay Updated!"</string>
     <string name="description5">"We keep training our prediction model with the new weather data that we get everyday to improve our accuracy and give the best results!"</string>
     <string name="heading6">"About Aliaga Wind Farm"</string>
-    <string name="description6">"The Aliağa Wind Farm is an onshore wind power plant located in Aliağa district of İzmir Province in western Turkey. The wind farm ommisioned in 2010 and consists of four fields operated by different companies. A total of 83 wind turbines have an installed output power of 193 MW generating an average annual electric energy of 481 GWh. Currently, the wind farm is the country's largest one."</string>
+    <string name="description6">"The Aliağa Wind Farm is an onshore wind power plant located in Aliağa district of İzmir Province in western Turkey. The wind farm ommisioned in 2010 and consists of four fields operated by different companies. A total of 83 wind turbines have an installed output power of 193 MW generating an average annual electric energy of 481 GWh."</string>
 
     <string name="heading7">"Technical details"</string>
     <string name="description7">"•   Wind Farm Yurtdağ consists of 17 turbines of type Nordex N90/2500 each with 90 m (300 ft) rotor diameter generating 2.5 MW power. Total installed power is 42.5 MW. Operated by Innores company.\n\n•	  Wind Farm 2 consists of 15 turbines of type Enercon E70/2000 each with 70 m (230 ft) rotor diameter generating 2.0 MW power. Total installed power is 30.0 MW. Operated by Doruk company.</string>
