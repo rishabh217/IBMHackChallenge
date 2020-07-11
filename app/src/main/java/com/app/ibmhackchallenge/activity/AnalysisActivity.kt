@@ -83,6 +83,60 @@ class AnalysisActivity : AppCompatActivity() {
         day2.text = dayTwo
         day3.text = dayThree
 
+        // Trigger fetchDay1 click
+        progressBar.visibility = View.VISIBLE
+
+        val service =
+            RetrofitClientInstance.retrofitInstance?.create(GetPointsService::class.java)
+        val call = service?.getAllPoints()
+
+        call?.enqueue(object : Callback<PointsList> {
+            override fun onFailure(call: Call<PointsList>, t: Throwable) {
+                Toast.makeText(this@AnalysisActivity, "Error Reading JSON", Toast.LENGTH_SHORT)
+                    .show()
+            }
+
+            override fun onResponse(call: Call<PointsList>?, response: Response<PointsList>?) {
+
+                val body = response?.body()
+                val points = body?.points
+
+                if (points != null) {
+
+                    val power = points.power
+                    val speed = points.speed
+
+                    val power1 = ArrayList<Double>()
+                    val speed1 = ArrayList<Double>()
+
+                    for (got in power) {
+                        if (got.key.toInt() in 0..23)
+                            power1.add(got.value)
+                    }
+
+                    for (got in speed) {
+                        if (got.key.toInt() in 0..23)
+                            speed1.add(got.value)
+                    }
+
+                    allotGraph(dayOne, power1, speed1)
+
+                    fetch1.setImageResource(R.drawable.sun_selected)
+                    fetch2.setImageResource(R.drawable.sun_not_selected)
+                    fetch3.setImageResource(R.drawable.sun_not_selected)
+
+                }
+                else {
+                    Toast.makeText(this@AnalysisActivity, "Not able to Draw", Toast.LENGTH_SHORT)
+                        .show()
+                }
+
+            }
+
+        })
+
+        progressBar.visibility = View.GONE
+
         fetchDay1.setOnClickListener {
 
             progressBar.visibility = View.VISIBLE
@@ -252,7 +306,10 @@ class AnalysisActivity : AppCompatActivity() {
         }
 
         backButton?.setOnClickListener {
-            startActivity(Intent(this@AnalysisActivity, MainActivity::class.java))
+            val intent = Intent(this@AnalysisActivity, MainActivity::class.java).apply {
+                flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            }
+            startActivity(intent)
         }
 
         Toast.makeText(this, "Select any day by tapping the date icon!", Toast.LENGTH_LONG).show()

@@ -44,25 +44,60 @@
 
         </RelativeLayout>
 
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/viewPagerMain"
-            android:overScrollMode="never"
-            android:clipToPadding="false"
-            android:layout_below="@id/github"
+        <RelativeLayout
+            android:id="@+id/viewPagerHeadMain"
             android:layout_width="match_parent"
-            android:layout_height="550dp" />
+            android:layout_height="wrap_content"
+            android:layout_below="@id/github" >
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPagerMain"
+                android:overScrollMode="never"
+                android:clipToPadding="false"
+                android:layout_width="match_parent"
+                android:layout_height="550dp" />
+
+            <com.viewpagerindicator.CirclePageIndicator
+                android:id="@+id/indicatorMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:padding="10dip"
+                app:centered="true"
+                app:fillColor="#80000000"
+                app:pageColor="#fff"
+                app:snap="false" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/analysis_button"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="#FDD835"
+            android:background="@drawable/round_button_hollow"
+            android:layout_below="@id/viewPagerHeadMain"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:typeface="monospace"
+            android:layout_margin="30dp"
+            android:layout_centerHorizontal="true"
+            android:text="Get Prediction"/>
 
         <TextView
             android:id="@+id/calculator_head"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="25sp"
-            android:layout_marginTop="20dp"
-            android:layout_centerHorizontal="true"
             android:textColor="#000"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            android:layout_centerHorizontal="true"
             android:typeface="monospace"
             android:text="Power Calculator"
-            android:layout_below="@id/viewPagerMain" />
+            android:layout_below="@id/analysis_button" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/main_card"
@@ -87,7 +122,10 @@
 
                 <EditText
                     android:id="@+id/param2"
-                    android:layout_margin="30dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginTop="15dp"
                     android:layout_width="match_parent"
                     android:inputType="numberDecimal"
                     android:layout_height="wrap_content"
@@ -101,7 +139,6 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:textSize="20sp"
-                    android:textColor="#FFF"
                     android:typeface="monospace"
                     android:text="Result"
                     android:layout_below="@id/param2"/>
@@ -119,32 +156,32 @@
 
         </androidx.cardview.widget.CardView>
 
-        <Button
-            android:id="@+id/analysis_button"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:textColor="#FDD835"
-            android:background="@drawable/round_button_hollow"
-            android:layout_below="@id/main_card"
-            android:textStyle="bold"
-            android:textAllCaps="false"
-            android:typeface="monospace"
-            android:layout_margin="30dp"
-            android:layout_centerHorizontal="true"
-            android:text="Get 72hr Prediction"/>
-
-        <TextView
-            android:id="@+id/how_it_works_button"
+        <LinearLayout
+            android:id="@+id/how_it_works"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="13sp"
-            android:textColor="#E53935"
-            android:layout_below="@id/analysis_button"
-            android:typeface="monospace"
-            android:layout_margin="15dp"
             android:layout_alignParentEnd="true"
-            android:text="Know how this app works"/>
+            android:layout_margin="15dp"
+            android:layout_below="@id/main_card" >
+
+            <ImageView
+                android:id="@+id/how_it_works_icon"
+                android:layout_width="15dp"
+                android:src="@drawable/ic_info"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:id="@+id/how_it_works_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:layout_marginStart="5dp"
+                android:textColor="#E53935"
+                android:typeface="monospace"
+                android:text="(Know more)"/>
+
+        </LinearLayout>
 
     </RelativeLayout>
 

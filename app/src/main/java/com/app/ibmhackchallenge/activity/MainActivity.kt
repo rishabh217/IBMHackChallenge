@@ -4,10 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.ImageButton
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.viewpager.widget.ViewPager
 import com.app.ibmhackchallenge.R
 import com.app.ibmhackchallenge.adapter.CardAdapter
@@ -18,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var analysisButton: Button
     private lateinit var calculateButton: Button
-    private lateinit var howItWorksButton: TextView
+    private lateinit var howItWorksButton: LinearLayout
     private lateinit var githubButton: ImageButton
 
     var viewPager: ViewPager? = null
@@ -32,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         analysisButton = findViewById(R.id.analysis_button)
         calculateButton = findViewById(R.id.calculate)
         githubButton = findViewById(R.id.github_repo)
-        howItWorksButton = findViewById(R.id.how_it_works_button)
+        howItWorksButton = findViewById(R.id.how_it_works)
 
         cards = ArrayList()
         cards!!.add(
@@ -63,6 +60,7 @@ class MainActivity : AppCompatActivity() {
         viewPager = findViewById(R.id.viewPagerMain)
         viewPager!!.adapter = adapter
         viewPager!!.setPadding(30, 0, 30, 0)
+        indicatorMain.setViewPager(viewPager)
 
         calculateButton.setOnClickListener {
             val firstParam = param1.text.toString()
@@ -73,7 +71,8 @@ class MainActivity : AppCompatActivity() {
             }
             val radius = firstParam.toFloat()
             val speed = secondParam.toFloat()
-            val power: Double = 1.57 * (radius * radius) * (speed * speed * speed) * 1.2 * 40
+            var power: Double = 1.57 * (radius * radius) * (speed * speed * speed) * 1.2 * 40
+            power /= 1000
             result.text = power.toFloat().toString() + " kW"
         }
 

@@ -8,6 +8,7 @@ import androidx.viewpager.widget.ViewPager
 import com.app.ibmhackchallenge.R
 import com.app.ibmhackchallenge.adapter.CardAdapter
 import com.app.ibmhackchallenge.model.Card
+import kotlinx.android.synthetic.main.activity_how_it_works.*
 
 
 class HowItWorksActivity : AppCompatActivity() {
@@ -51,9 +52,13 @@ class HowItWorksActivity : AppCompatActivity() {
         viewPager = findViewById(R.id.viewPagerHIW)
         viewPager!!.adapter = adapter
         viewPager!!.setPadding(30, 0, 30, 0)
+        indicatorHIW.setViewPager(viewPager)
 
         backButton?.setOnClickListener {
-            startActivity(Intent(this@HowItWorksActivity, MainActivity::class.java))
+            val intent = Intent(this@HowItWorksActivity, MainActivity::class.java).apply {
+                flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            }
+            startActivity(intent)
         }
 
     }

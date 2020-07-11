@@ -2,19 +2,19 @@
     <string name="app_name">IBMHackChallenge</string>
 
     <string name="heading1">"Welcome!"</string>
-    <string name="description1">"•	 This app is made to help wind farms utilize maximum wind power and regulate other conventional sources of energy according to the wind power predictions that we are making here!"</string>
+    <string name="description1">"This app is made to help wind farms utilize maximum wind power and regulate other conventional sources of energy according to the wind power predictions that we are making here!"</string>
     <string name="heading2">"Why Wind Energy?"</string>
     <string name="description2">"•	 It is clean and renewable.\n\n•	 It is the fastest-growing energy source and accounts to 4 percent of the world’s electricity needs.\n\n•	 Utilizing wind power can save valuable fossil fuels."</string>
 
     <string name="heading3">"Our Attempt"</string>
-    <string name="description3">"•	 We have developed a time series model to predict the hourly power output of wind farm in Aliaga, Turkey and suggest the best time to utilise maximum wind power based on the weather conditions at site."</string>
+    <string name="description3">"We have developed a time series model to predict the hourly power output of wind farm in Aliaga, Turkey and suggest the best time to utilise maximum wind power based on the weather conditions at site."</string>
     <string name="heading4">"How to Use the App?"</string>
     <string name="description4">"•	 We have a Wind Power Prediction graph and table that enable you to get the hourly predictions of the next 72 hours.\n\n•	 Along with this, we suggest the time when maximum energy can be harnessed.\n\n•	 We also have a Wind Power Calculator! Just tell us the wind speed and turbine radius, and we’ll predict the wind power for you !"</string>
 
     <string name="heading5">"We Stay Updated!"</string>
-    <string name="description5">"•	 We keep training our prediction model with the new weather data that we get everyday to improve our accuracy and give the best results!"</string>
+    <string name="description5">"We keep training our prediction model with the new weather data that we get everyday to improve our accuracy and give the best results!"</string>
     <string name="heading6">"About Aliaga Wind Farm"</string>
-    <string name="description6">"•	 The Aliağa Wind Farm is an onshore wind power plant located in Aliağa district of İzmir Province in western Turkey. The wind farm ommisioned in 2010 and consists of four fields operated by different companies. A total of 83 wind turbines have an installed output power of 193 MW generating an average annual electric energy of 481 GWh. Currently, the wind farm is the country's largest one."</string>
+    <string name="description6">"The Aliağa Wind Farm is an onshore wind power plant located in Aliağa district of İzmir Province in western Turkey. The wind farm ommisioned in 2010 and consists of four fields operated by different companies. A total of 83 wind turbines have an installed output power of 193 MW generating an average annual electric energy of 481 GWh. Currently, the wind farm is the country's largest one."</string>
 
     <string name="heading7">"Technical details"</string>
     <string name="description7">"•   Wind Farm Yurtdağ consists of 17 turbines of type Nordex N90/2500 each with 90 m (300 ft) rotor diameter generating 2.5 MW power. Total installed power is 42.5 MW. Operated by Innores company.\n\n•	  Wind Farm 2 consists of 15 turbines of type Enercon E70/2000 each with 70 m (230 ft) rotor diameter generating 2.0 MW power. Total installed power is 30.0 MW. Operated by Doruk company.</string>
