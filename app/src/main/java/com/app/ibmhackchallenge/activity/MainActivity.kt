@@ -71,7 +71,7 @@ class MainActivity : AppCompatActivity() {
             }
             val radius = firstParam.toFloat()
             val speed = secondParam.toFloat()
-            var power: Double = 1.57 * (radius * radius) * (speed * speed * speed) * 1.2 * 40
+            var power: Double = 1.57 * (radius * radius) * (speed * speed * speed) * 1.2 * 0.4
             power /= 1000
             result.text = power.toFloat().toString() + " kW"
         }

@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Zephyr</string>
+    <string name="contact_us">"Any suggestions? Know more about us!!\nMail us at :"</string>
+    <string name="mail_id"><u>"oyemailtobta@gmail.com</u>"</string>
 
     <string name="heading1">"Welcome!"</string>
     <string name="description1">"This app is made to help wind farms utilize maximum wind power and regulate other conventional sources of energy according to the wind power predictions that we are making here!"</string>
